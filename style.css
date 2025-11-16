@@ -1,0 +1,152 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #6EE7B7;
+}
+
+/* HAMBURGER MENU */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #1F2937;
+  color: white;
+}
+
+.hero span {
+  color: #6EE7B7;
+}
+
+.btn {
+  display: inline-block;
+  background: #6EE7B7;
+  color: #111;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ABOUT */
+.about,
+.skills,
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.skill-card {
+  background: #111827;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  background: #6EE7B7;
+  color: black;
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+.footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a {
+  color: #6EE7B7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #111827;
+    padding: 15px;
+  }
+
+  #menu-toggle:checked + .hamburger + .navbar {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
